@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="card col-sm-5 " *ngFor="let item of products">
+        <div class="ifCond" *ngIf="item.isAvailable">
+            <img [src]="item.img" class="card-img-top img" alt="{{item.imgAlt}}">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name | uppercase}}</h5>
+                <h5 class="card-title">${{item.price}}</h5>
+                <ul class="list1">
+                    <li class="list">{{item.description}}</li>
+                </ul>
+                <button class="btn btn-primary" [disabled]="!item.isAvailable">Add To Cart</button>
+
+            </div>
+        </div>
+    </div>
+</div>
