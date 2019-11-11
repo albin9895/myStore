@@ -1,0 +1,11 @@
+<div *ngIf="item">
+    <img [src]="item.img" class="card-img-top img" alt="{{item.imgAlt}}">
+    <div class="card-body">
+        <h5 class="card-title">{{item.name | uppercase}}</h5>
+        <h5 class="card-title">${{item.price}}</h5>
+        <ul class="list1">
+            <li class="list">{{item.description}}</li>
+        </ul>
+
+    </div>
+</div>
